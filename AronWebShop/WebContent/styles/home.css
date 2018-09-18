@@ -1,0 +1,430 @@
+body{
+    color:#574c3f;
+    font-family: Corbel, Arial, Helvetica, Verdana, sans-serif;
+    font-size: 16px;
+   
+    background-image: url("wow_bground.jpg");
+    background-size: cover;
+}
+
+#treebody{
+    color:#574c3f;
+    font-family: Corbel, Arial, Helvetica, Verdana, sans-serif;
+    font-size: 16px;
+   
+    background-image: url("malfurion.jpg");
+    background-size:cover;
+}
+
+
+
+#wrapper{
+    width:1100px;
+    margin:auto;
+    padding-bottom: 20px;
+    background-color: white;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+
+    overflow: hidden;
+
+}
+
+#filter2{
+    width:1100px;
+    margin:auto;
+    padding-bottom: 20px;
+    background-color: white;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+
+    overflow: hidden;
+
+}
+
+#banner{
+
+
+}
+
+#navigation{
+    height:45px;
+   /* background:linear-gradient(to top, #c2bcb5, #ffffff);*/
+    background:linear-gradient(to top, #000000, #A52A2A);
+    border-radius: 4px;
+}
+
+#filter{
+    height:45px;
+    width: 500px;
+   /* background:linear-gradient(to top, #c2bcb5, #ffffff);*/
+    
+    border-radius: 4px;
+}
+
+#filter a{
+	
+}
+
+#filter a img{
+	float: left;
+	display: block;
+	padding: 5px;
+	margin: 5px;
+	background-color: transparent;
+	background: transparent;
+}
+
+#nav{
+    display:block;
+    list-style: none;
+    text-align: center;
+    color:white;
+}
+
+#nav ul{
+    display: none;
+    list-style: none;
+}
+
+#nav li{
+    float:left;
+    display: block;
+    margin-top: 15px;
+    text-transform: uppercase;
+    padding: 0px 20px 0px 20px;
+    border-left: 1px solid #FFFFFF;
+}
+
+#nav a:link, #nav a:visited, #nav a:active{
+    display: block;
+    color: #6495ED;
+    text-decoration: none;
+    font-family: Arial;
+}
+
+#content{
+	width:1000px;
+}
+
+img {
+    border-radius: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    display: table-cell;
+    
+}
+
+label {
+    background-color: #A52A2A; /* Blue */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    
+    border-radius: 4px;
+    height: 40px;
+    width: 100px;
+    line-height: 35px;
+    
+}
+
+button {
+    background-color: #6495ED; /* Blue */
+    border: none;
+    color: white;
+    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 40px;
+    width: 100px;
+}
+
+
+
+input[type=number] { 
+  	
+    border-radius: 4px;
+    height: 40px;
+    width: 100px;
+}
+
+li.rightnav{
+    float:right;
+    display: block;
+    margin-top: 15px;
+    text-transform: uppercase;
+    padding: 0px 20px 0px 20px;
+    border-left: 1px solid #FFFFFF;
+}
+
+#agreen {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+
+
+
+#horde-label {
+    background-color: #A52A2A; /* Blue */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    
+    border-radius: 4px;
+    height: 40px;
+    width: 200px;
+    line-height: 35px;
+    
+}
+
+#alliance-label {
+    background-color: #6495ED; /* Blue */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    
+    border-radius: 4px;
+    height: 40px;
+    width: 200px;
+    line-height: 35px;
+    
+}
+
+
+
+#horde-button {
+    background-color: #A52A2A; /* Blue */
+    border: none;
+    color: white;
+    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 40px;
+    width: 200px;
+}
+
+#alliance-button {
+    background-color: #6495ED; /* Blue */
+    border: none;
+    color: white;
+    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 40px;
+    width: 200px;
+}
+
+#input-horde { 
+  	border-color: #A52A2A;
+    border-radius: 4px;
+    height: 40px;
+    width: 205px;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 3px;
+    text-align: center;
+}
+#input-alliance { 
+  	border-color: #6495ED;
+    border-radius: 4px;
+    height: 40px;
+    width: 205px;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 3px;
+    text-align: center;
+}
+
+
+#alli {
+    background-color: #A52A2A; /* Blue */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    
+    border-radius: 4px;
+    font-size: 60px;
+    
+}
+
+
+
+
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    background-color: #A52A2A;
+    color: white;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+#customers2 {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers2 td, #customers2 th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    background-color: #6495ED;
+    color: white;
+}
+
+#customers2 tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers2 tr:hover {background-color: #ddd;}
+
+#customers2 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+
+
+
+
+.big {
+  font-size: 1.2em;
+}
+
+.small {
+  font-size: .7em;
+}
+
+.square {
+  width: .7em;
+  height: .7em;
+  margin: .5em;
+  display: inline-block;
+}
+
+/* Custom dropdown */
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px; /* demo only */
+}
+
+.custom-dropdown select {
+  background-color: #1abc9c;
+  color: #fff;
+  font-size: inherit;
+  padding: .5em;
+  padding-right: 2.5em;	
+  border: 0;
+  margin: 0;
+  border-radius: 3px;
+  text-indent: 0.01px;
+  text-overflow: '';
+  /*Hiding the select arrow for firefox*/
+  -moz-appearance: none;
+  /*Hiding the select arrow for chrome*/
+  -webkit-appearance:none;
+  /*Hiding the select arrow default implementation*/
+  appearance: none;
+}
+/*Hiding the select arrow for IE10*/
+.custom-dropdown select::-ms-expand {
+    display: none;
+}
+
+.custom-dropdown::before,
+.custom-dropdown::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.custom-dropdown::after { /*  Custom dropdown arrow */
+  content: "\25BC";
+  height: 1em;
+  font-size: .625em;
+  line-height: 1;
+  right: 1.2em;
+  top: 50%;
+  margin-top: -.5em;
+}
+
+.custom-dropdown::before { /*  Custom dropdown arrow cover */
+  width: 2em;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(0,0,0,.2);
+}
+
+.custom-dropdown::after {
+  color: rgba(0,0,0,.6);
+}
+
+.custom-dropdown select[disabled] {
+  color: rgba(0,0,0,.25);
+}
