@@ -85,7 +85,7 @@
 					return actions.payment.create({
 						transactions : [ {
 							amount : {
-								total : '120.01',
+								total : '120.00',
 								currency : 'USD'
 							}
 						} ]

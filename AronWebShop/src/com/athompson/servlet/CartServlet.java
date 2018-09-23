@@ -21,30 +21,30 @@ import com.athompson.repo.DatabaseISH;
 @WebServlet("/CartServlet")
 public class CartServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public CartServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-	
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public CartServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
-	
-    protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-    	HttpSession session = request.getSession();
+
+	protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response)
+			throws javax.servlet.ServletException, IOException {
+		HttpSession session = request.getSession();
 		Cart cart = (Cart) session.getAttribute("cart");
-		
-		
+
 		String productIdAdd = request.getParameter("productAdd");
 		String productIdReduce = request.getParameter("productReduce");
 		String productIdRemove = request.getParameter("productRemove");
@@ -60,59 +60,57 @@ public class CartServlet extends HttpServlet {
 			System.out.println("Removing");
 			cart.removeProduct(DatabaseISH.getInstance().getProduct(productIdRemove));
 		}
-			
+
 		if (cart != null && cart.getProducts().size() > 0) {
 			request.setAttribute("CART", cart);
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/cartView.jsp");
-	        dispatcher.forward(request, response);
-			
-		}else {
+			dispatcher.forward(request, response);
+
+		} else {
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/HomeServlet");
-	        dispatcher.forward(request, response);
+			dispatcher.forward(request, response);
 		}
-		
-    	try {
-            // read the "command" parameter
-            String theCommand = request.getParameter("command");
-            // rout to the appropriate method
-            if (theCommand == null) {
-                theCommand ="ALL";
-            }
 
-            switch (theCommand) {
-                case "ALL":
-                    listAll(request, response);
-                    break;
+		try {
+			// read the "command" parameter
+			String theCommand = request.getParameter("command");
+			// rout to the appropriate method
+			if (theCommand == null) {
+				theCommand = "ALL";
+			}
 
-                case "HORDE":
-                    listHorde(request,response);
-                    break;
+			switch (theCommand) {
+			case "ALL":
+				listAll(request, response);
+				break;
 
-                case "ALLIANCE":
-                    listAlliance(request, response);
-                    break;
+			case "HORDE":
+				listHorde(request, response);
+				break;
 
+			case "ALLIANCE":
+				listAlliance(request, response);
+				break;
 
+			default:
+				listAll(request, response);
+				break;
+			}
 
-                default:
-                    listAll(request, response);
-                    break;
-            }
+		} catch (Exception e) {
+			throw new ServletException(e);
+		}
+	}
 
+	private void listAll(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
-        } catch (Exception e) {
-            throw new ServletException(e);
-        }
-    }
+	}
 
-    private void listAll(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        
-       
-    }
-    private void listHorde(HttpServletRequest request, HttpServletResponse response) throws Exception{
-    	
-    }
-    private void listAlliance(HttpServletRequest request, HttpServletResponse response) {
-    }
+	private void listHorde(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+	}
+
+	private void listAlliance(HttpServletRequest request, HttpServletResponse response) {
+	}
 
 }

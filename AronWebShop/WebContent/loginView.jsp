@@ -32,16 +32,18 @@
 						<td><label id="horde-label">Email</label></td>
 					</tr>
 					<tr>
-						<td><input type="text" name="userName" id="input-horde"/></td>
+						<td><input type="text" name="userName" id="input-horde" /></td>
 					</tr>
 					<tr>
 						<td><label id="alliance-label">Password</label></td>
 					</tr>
 					<tr>
-						<td><input type="password" name="password" id="input-alliance" /></td>
+						<td><input type="password" name="password"
+							id="input-alliance" /></td>
 					</tr>
 					<tr>
-						<td align="center"><input type="submit" value="Login" id="horde-button"/></td>
+						<td align="center"><input type="submit" value="Login"
+							id="horde-button" /></td>
 					</tr>
 				</table>
 			</form>

@@ -19,36 +19,39 @@ import com.athompson.repo.DatabaseISH;
 @WebServlet("/ShoppingHistoryServlet")
 public class ShoppingHistoryServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public ShoppingHistoryServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public ShoppingHistoryServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		String userEmail = request.getParameter("userEmailSelect");
-		System.out.println("SHOP HISTORY"+userEmail);
+		System.out.println("SHOP HISTORY" + userEmail);
 		if (userEmail != null) {
 			User selectedUser = DatabaseISH.getInstance().getUserByEmail(userEmail);
 			session.setAttribute("SELECTED_USER", selectedUser);
 		}
-		
-		
+
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/shoppingHistoryAdminView.jsp");
-        dispatcher.forward(request, response);
+		dispatcher.forward(request, response);
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}

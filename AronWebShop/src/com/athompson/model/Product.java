@@ -1,67 +1,67 @@
 package com.athompson.model;
 
 public class Product {
-    private String name;
-    private String category;
-    private String id;
-    private String imagePath;
-    private Double price;
-    private int amount;
-    
-    public int getAmount() {
-    	return amount;
-    }
-    
-    public void setAmount(int amount) {
-    	this.amount = amount;
-    }
+	private String name;
+	private String category;
+	private String id;
+	private String imagePath;
+	private Double price;
+	private int amount;
 
-    public Product(String imagePath, String name,  Double price, String category, String id) {
-        this.name = name;
-        this.category = category;
-        this.id = id;
-        this.imagePath = imagePath;
-        this.price = price;
-        this.amount = 1;
-    }
+	public int getAmount() {
+		return amount;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public Product(String imagePath, String name, Double price, String category, String id) {
+		this.name = name;
+		this.category = category;
+		this.id = id;
+		this.imagePath = imagePath;
+		this.price = price;
+		this.amount = 1;
+	}
 
-    public String getCategory() {
-        return category;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setCategory(String category) {
-        this.category = category;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public String getId() {
-        return id;
-    }
+	public String getCategory() {
+		return category;
+	}
 
-    public void setId(String id) {
-        this.id = id;
-    }
+	public void setCategory(String category) {
+		this.category = category;
+	}
 
-    public String getImagePatj() {
-        return imagePath;
-    }
+	public String getId() {
+		return id;
+	}
 
-    public void setImagePatj(String imagePatj) {
-        this.imagePath = imagePatj;
-    }
+	public void setId(String id) {
+		this.id = id;
+	}
 
-    public Double getPrice() {
-        return price;
-    }
+	public String getImagePatj() {
+		return imagePath;
+	}
 
-    public void setPrice(Double price) {
-        this.price = price;
-    }
+	public void setImagePatj(String imagePatj) {
+		this.imagePath = imagePatj;
+	}
+
+	public Double getPrice() {
+		return price;
+	}
+
+	public void setPrice(Double price) {
+		this.price = price;
+	}
 }

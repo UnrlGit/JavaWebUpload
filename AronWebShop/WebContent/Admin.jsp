@@ -29,21 +29,23 @@
 									<tr style="background-color: #A52A2A">
 										<td>${user.firstName}</td>
 									</tr>
-									<tr><td>
-										<table id="customers2">
-											<c:forEach var="loginTimes" items="${user.logins}">
-												<tr>
-													<td>${loginTimes}</td>
-												</tr>
-											</c:forEach>
-											
-										</table></td>
+									<tr>
+										<td>
+											<table id="customers2">
+												<c:forEach var="loginTimes" items="${user.logins}">
+													<tr>
+														<td>${loginTimes}</td>
+													</tr>
+												</c:forEach>
+
+											</table>
+										</td>
 									</tr>
-								</table>
-								<br><br>
+								</table> <br>
+							<br>
 							</td>
 						</tr>
-						
+
 					</c:forEach>
 				</table>
 			</form>

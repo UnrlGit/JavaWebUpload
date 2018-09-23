@@ -37,7 +37,7 @@ public class HistoryServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		//DatabaseISH databaseISH = DatabaseISH.getInstance();
+		// DatabaseISH databaseISH = DatabaseISH.getInstance();
 
 		HttpSession session = request.getSession();
 
@@ -45,35 +45,36 @@ public class HistoryServlet extends HttpServlet {
 		User dbUser = DatabaseISH.getInstance().getUser(loggedUser.getEmail(), loggedUser.getPassword());
 		System.out.println(dbUser.getFirstName());
 		for (ShoppingHistory history : dbUser.getShoppingHistory()) {
-			System.out.println("HSERVLET "+ history.getPrice());
+			System.out.println("HSERVLET " + history.getPrice());
 			for (String s : history.getItemsAndAmount()) {
 				System.out.println(s);
 			}
 		}
 
 		// WORKAROUND
-		//@SuppressWarnings("unchecked")
-		//ArrayList<ShoppingHistory> shoppingHistories = (ArrayList<ShoppingHistory>) session.getAttribute("SHOPPING_HISTORY");
-		//if (shoppingHistories != null) {
-		//	for (ShoppingHistory sh : shoppingHistories) {
-		//		dbUser.addShoppingCart(sh);
-		//		System.out.println("SHOHISTORY" + sh.getCart().totalPrice());
-		//	}
-		//}
+		// @SuppressWarnings("unchecked")
+		// ArrayList<ShoppingHistory> shoppingHistories = (ArrayList<ShoppingHistory>)
+		// session.getAttribute("SHOPPING_HISTORY");
+		// if (shoppingHistories != null) {
+		// for (ShoppingHistory sh : shoppingHistories) {
+		// dbUser.addShoppingCart(sh);
+		// System.out.println("SHOHISTORY" + sh.getCart().totalPrice());
+		// }
+		// }
 
 		session.setAttribute("USER_HISTORY", dbUser.getShoppingHistory());
-		//session.setAttribute("SHOPPING_HISTORY", dbUser.getShoppingHistory());
+		// session.setAttribute("SHOPPING_HISTORY", dbUser.getShoppingHistory());
 
 		// TODO delete this test
-		//System.out.println("TESTING DATA HSERVLET");
+		// System.out.println("TESTING DATA HSERVLET");
 
-		//User test = DatabaseISH.getInstance().getUser("buha@buhic.com", "heck123");
+		// User test = DatabaseISH.getInstance().getUser("buha@buhic.com", "heck123");
 
-		//ArrayList<ShoppingHistory> carts = test.getShoppingHistory();
-		//for (ShoppingHistory sh : carts) {
-		//	Cart w = sh.getCart();
-		//	System.out.println(w.totalPrice());
-		//}
+		// ArrayList<ShoppingHistory> carts = test.getShoppingHistory();
+		// for (ShoppingHistory sh : carts) {
+		// Cart w = sh.getCart();
+		// System.out.println(w.totalPrice());
+		// }
 
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/historyView.jsp");
 		dispatcher.forward(request, response);

@@ -5,10 +5,10 @@ import com.athompson.model.User;
 
 import java.util.ArrayList;
 
-public interface ShopRepo
-{
+public interface ShopRepo {
 
-    public ArrayList<Product> getItem(String filter);
-    public User getUser(String email, String password);
+	public ArrayList<Product> getItem(String filter);
+
+	public User getUser(String email, String password);
 
 }

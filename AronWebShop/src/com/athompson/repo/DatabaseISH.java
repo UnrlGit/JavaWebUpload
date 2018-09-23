@@ -18,38 +18,26 @@ public class DatabaseISH implements ShopRepo {
 
 	private DatabaseISH() {
 
-		users = new User[] { new User("Miro", "Miric", "miro@mirich.com", "Ilica 242", UserType.ADMIN, "pass123"),
-				new User("Buha", "Buhic", "buha@buhic.com", "Trnje 1", UserType.USER, "heck123"),
-				new User("Loop", "Cat", "loop@cat.com", "Negdje 21", UserType.USER, "tummy123") };
+		users = new User[] { new User("Sylvanass", "Windrunner", "windrunner@wowshop.com", "Ilica 242", UserType.ADMIN, "hunter123"),
+				new User("Thrall", "Son of Durotan", "thrall@thrall.com", "Trnje 1", UserType.USER, "shaman123"),
+				new User("Tyrande", "Whisperwind", "whisper@tyrande.com", "Negdje 21", UserType.USER, "priest123") };
 
 		items = new Product[] { new Product("pictures/products/alliance_ashbringer.jpg", "Alliance Ashbringer", 50.00, "Figures", "1"),
 				new Product("pictures/products/alliance_helmet.jpg", "Alliance Helmet", 250.00, "Figures", "2"),
 				new Product("pictures/products/neutral_sword.jpg", "Neutral Sword", 15.00, "Other", "3"),
 				new Product("pictures/products/neutral_warglaive.jpg", "Warglaive of Azzinoth", 15.00, "Other", "4"),
 				new Product("pictures/products/horde_dagger.jpg", "Horde Dagger", 30.00, "Plushies", "5"),
-				//new Product("pictures/products/bottle_256.jpg", "Water bottle", 40.00, "Other", "6"),
+				
 				new Product("pictures/products/horde_cake.jpg", "Horde Cake", 40.00, "Plushies", "7"),
 				new Product("pictures/products/alliance_shield.jpg", "Alliance Shield", 50.00, "Figures", "8"),
 				new Product("pictures/products/horde_sword.jpg", "Horde Sword", 25.00, "Plushies", "9"),
 				new Product("pictures/products/alliance_sword.jpg", "Alliance Sword", 80.00, "Figures", "10"),
-				//new Product("pictures/products/sombra_256.jpg", "Sombra nendoroid", 50.00, "Figures", "11"),
+				
 				new Product("pictures/products/horde_axe.jpg", "Straps set", 10.00, "Plushies", "12"),
-				//new Product("pictures/products/vader_256.jpg", "Vader statue", 300.00, "Figures", "13") 
+				
 				};
 
-		// for (User user : users) {
-		// Cart cart1 = new Cart();
-		// cart1.addProduct(items[0]);
-		// cart1.addProduct(items[0]);
-		// cart1.addProduct(items[0]);
-		// cart1.addProduct(items[4]);
-		// LocalDateTime localDateTime = LocalDateTime.of(2000, 2, 2, 4, 14);
-		/// ShoppingHistory shoppingHistory = new ShoppingHistory(cart1, localDateTime,
-		// PaymentType.CASH);
-		// LocalDateTime randomLoginTime = LocalDateTime.of(1999, 2, 2, 4, 14);
-		// user.addShoppingCart(shoppingHistory);
-		// user.addLogin(randomLoginTime);
-		// }
+		
 
 	};
 

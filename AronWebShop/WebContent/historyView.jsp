@@ -18,35 +18,31 @@
 				<li><a href="CartServlet">Cart</a></li>
 
 				<%
-						HttpSession ses = request.getSession();
-						User user = (User)ses.getAttribute("user");
-						if(user != null)
-						{
-							
-							out.println("<li>");
-							out.println("<a href='HistoryServlet'>Shopping History</a>");
-							out.println("</li>");
-							
-							out.println("<li style='float: right'>");
-							out.println("<a href='LogoutServlet'>Logout</a>");
-							out.println("</li>");
-							
-							out.println("<li style='float: right'>");
-							out.println("Welcome, " +user.getFirstName());
-							out.println("</li>");
-						}
-						
-						if(user == null)
-						{
-							
-							out.println("<li style='float: right'>");
-							out.println("<a href='loginView.jsp'>Login</a>");
-							out.println("</li>");
-							
-							
-						}
-					
-					%>
+					HttpSession ses = request.getSession();
+					User user = (User) ses.getAttribute("user");
+					if (user != null) {
+
+						out.println("<li>");
+						out.println("<a href='HistoryServlet'>Shopping History</a>");
+						out.println("</li>");
+
+						out.println("<li style='float: right'>");
+						out.println("<a href='LogoutServlet'>Logout</a>");
+						out.println("</li>");
+
+						out.println("<li style='float: right'>");
+						out.println("Welcome, " + user.getFirstName());
+						out.println("</li>");
+					}
+
+					if (user == null) {
+
+						out.println("<li style='float: right'>");
+						out.println("<a href='loginView.jsp'>Login</a>");
+						out.println("</li>");
+
+					}
+				%>
 
 			</ul>
 		</div>
@@ -64,7 +60,9 @@
 					<td>
 						<table id="customers">
 							<c:forEach var="product" items="${tempItem.itemsAndAmount}">
-								<tr><td style="background-color: #A52A2A">${product}</td></tr>
+								<tr>
+									<td style="background-color: #A52A2A">${product}</td>
+								</tr>
 							</c:forEach>
 						</table>
 
@@ -79,7 +77,8 @@
 			</table>
 
 
-			<br><br>
+			<br>
+			<br>
 		</c:forEach>
 	</div>
 

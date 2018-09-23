@@ -10,7 +10,7 @@
 </head>
 <body>
 
-	
+
 
 	<div id="wrapperMenu">
 		<div id="navigation">
@@ -48,7 +48,7 @@
 									</tr>
 								</c:forEach>
 							</table>
-							
+
 						</td>
 					</tr>
 					<tr>

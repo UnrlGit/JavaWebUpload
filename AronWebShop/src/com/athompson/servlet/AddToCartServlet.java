@@ -49,7 +49,6 @@ public class AddToCartServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
 
 		String productId = request.getParameter("product");
 		// Integer id = Integer.valueOf(productId);
@@ -59,9 +58,9 @@ public class AddToCartServlet extends HttpServlet {
 
 		String amountOfItems = request.getParameter("quantity");
 		Integer amount = Integer.valueOf(amountOfItems);
-		//System.out.println("AMOUNT: " + amount);
+		// System.out.println("AMOUNT: " + amount);
 		newProduct.setAmount(amount);
-		//System.out.println("NEW PRODUCT AMOUNT: " + newProduct.getAmount());
+		// System.out.println("NEW PRODUCT AMOUNT: " + newProduct.getAmount());
 
 		HttpSession session = request.getSession();
 		Cart cart = (Cart) session.getAttribute("cart");
